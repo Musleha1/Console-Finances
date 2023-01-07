@@ -86,3 +86,59 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+
+
+console.log("Financial Analysis")
+
+console.log("------------------------")
+
+//! Total number of months:
+
+// Work out length of array
+// totalMonths = length of array
+
+var totalMonths = finances.length
+
+console.log("Total Months: " + totalMonths);
+
+// var Months = finances[0];
+// console.log("Total Months: " + (finances.length) )
+
+
+
+//! Net total of Profit/Losses:
+
+// Work out sum of all items in the Profit/Loss column
+// netTotal = sum of all Profit/Loss for all months
+
+var netTotal = 0;
+
+for (var i = 0; i < totalMonths; i++) {
+    netTotal = netTotal += finances [i] [1];
+       
+}
+console.log("Total: $" + netTotal);
+
+
+
+ 
+
+
+//Math.max(0, 150, 30, 20, -8, -200);
+
+// Math.min(0, 150, 30, 20, -8, -200);
+
+
+//change - subtract from previos month. for every month. divide by total no. of months
+
+
+//variables tracking different things
+
+
+//print to nearest 100th - num.toFixed(2)
+
+
+//loops, if statements, 
+
+
