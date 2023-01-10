@@ -114,11 +114,47 @@ console.log("Total Months: " + totalMonths);
 
 var netTotal = 0;
 
+var change = [];
+
+var totalChange = 0;
+
+var averageChange = 0;
+
+var previousProfit = 0;
+
+var greatest = ["", 0];
+
+var least = ["", Number.MAX_SAFE_INTEGER ]
+
 for (var i = 0; i < totalMonths; i++) {
+
     netTotal = netTotal += finances [i] [1];
-       
+    if (i!==0){
+        previousProfit = finances [i-1][1];
+    }
+    change [i] = finances [i] [1] - previousProfit;
+    totalChange += change [i];
+
+    if (change [i] > greatest [1]){
+        greatest = [finances [i] [0], change [i]];
+    }
+    if (change [i] < least [1]){
+        least = [finances [i] [0], change [i]];
+    }
 }
 console.log("Total: $" + netTotal);
+
+
+//! Average Changes in Profit/Losses:
+
+averageChange = totalChange/finances.length;
+
+console.log("Average Change :" + averageChange.toFixed(2));
+
+console.log("Greatest Increase in Profits: " + greatest [0] + " " + "($" + greatest[1] + ")") ;
+
+console.log("Greatest Decrease in Profits: " + least [0] + " " + "($" + least [1] + ")");
+
 
 
 
@@ -130,15 +166,9 @@ console.log("Total: $" + netTotal);
 // Math.min(0, 150, 30, 20, -8, -200);
 
 
-//change - subtract from previos month. for every month. divide by total no. of months
+//change - subtract from previous month. for every month. divide by total no. of months
 
 
-//variables tracking different things
 
-
-//print to nearest 100th - num.toFixed(2)
-
-
-//loops, if statements, 
 
 
