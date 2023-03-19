@@ -2,16 +2,13 @@
 
 ## Description
 
-I designed and built my portfolio layout using Bootstrap CSS Framework.
 This project is based on the concepts I have learned in Javascript fundamentals to address a real-world example. The task was to create code base for analysing the financial records of a company.
 
 Skills utilised: psuedocoding, variables, for loops and if statements.
 
-
 ## Installation
 
 N/A
-
 
 ## Usage
 
